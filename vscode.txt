@@ -1,0 +1,7 @@
+PKief.material-icon-theme
+felixfbecker.php-intellisense
+flowtype.flow-for-vscode
+jaredly.reason-vscode
+ms-vscode.cpptools
+thenikso.github-plus-theme
+vscodevim.vim

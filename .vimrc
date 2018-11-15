@@ -27,7 +27,7 @@ filetype plugin on
 ":PluginSearch foo - searches for foo; append `!` to refresh local cache
 ":PluginClean      - confirms removal of unused plugins; append `!` to
 "auto-approve removal
-"
+
 "see :h vundle for more details or wiki for FAQ
 "Put your non-Plugin stuff after this line
 
@@ -40,9 +40,9 @@ set path+=**
 set wildmenu
 
 "tab length 
-set tabstop=4    
-set shiftwidth=4
-set softtabstop=4
+set tabstop=2    
+set shiftwidth=2
+set softtabstop=2
 set expandtab  
 
 "spelling

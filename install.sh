@@ -40,5 +40,6 @@ if [ ! -d ~/setup-repos ]; then
   git clone https://github.com/Kalk88/dotfiles.git setup-repos/dotfiles
   cp setup-repos/dotfiles/.vimrc ~/.vimrc
   cp setup-repos/dotfiles/.zshrc ~/.zshrc
+  cp setup-repos/dotfiles/.tmux.conf ~/.tmux.conf
   sudo rm -rf setup-repos
 fi

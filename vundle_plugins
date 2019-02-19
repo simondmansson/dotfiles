@@ -1,5 +1,0 @@
-Plugin 'tpope/vim-fugitive'
-Plugin 'reasonml-editor/vim-reason-plus'
-Plugin 'prettier/vim-prettier'
-Plugin 'vim-syntastic/syntastic'
-

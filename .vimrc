@@ -19,14 +19,14 @@ call vundle#end()            " required
 "filetype plugin indent on    " required
 "To ignore plugin indent changes, instead use:
 "filetype plugin on
-"
-""Brief help
+
+"Brief help
 ":PluginList       - lists configured plugins
 ":PluginInstall    - installs plugins; append `!` to update or just
 ":PluginUpdate
-"":PluginSearch foo - searches for foo; append `!` to refresh local cache
+":PluginSearch foo - searches for foo; append `!` to refresh local cache
 ":PluginClean      - confirms removal of unused plugins; append `!` to
-""auto-approve removal
+"auto-approve removal
 
 "see :h vundle for more details or wiki for FAQ
 "Put your non-Plugin stuff after this line
@@ -35,8 +35,8 @@ set number
 syntax enable
 
 "tab-completion 
-"set path+=**
-"set wildmenu
+set path+=**
+set wildmenu
 
 "tab length 
 set tabstop=2    
@@ -64,4 +64,3 @@ let g:netrw_sort_sequence = '[\/]$,*'
 
 "open file in a new tab
 let g:netrw_browse_split = 3
-

@@ -1,41 +1,34 @@
 set nocompatible    "be iMproved, required
 filetype off        "required
 
-"set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+call plug#begin('~/.vim/plugged')
+Plug 'junegunn/vim-easy-align'
+"General
+Plug 'tpope/vim-fugitive'
+Plug 'vim-syntastic/syntastic'
+Plug 'scrooloose/nerdtree'
+Plug 'itchyny/lightline.vim'
+Plug 'mhinz/vim-startify'
 
-"let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
+"ReasonML
+Plug 'reasonml-editor/vim-reason-plus'
 
-"Keep Plugin commands between vundle#begin/end.
-"plugin on GitHub repo
-Plugin 'tpope/vim-fugitive'
-Plugin 'reasonml-editor/vim-reason-plus'
-Plugin 'prettier/vim-prettier'
-Plugin 'vim-syntastic/syntastic'
-"All of your Plugins must be added before the following line
-call vundle#end()            " required
-"filetype plugin indent on    " required
-"To ignore plugin indent changes, instead use:
-"filetype plugin on
+"PHP
+Plug 'phpactor/phpactor', {'for': 'php', 'do': 'composer install'}
+"Javascript
+Plug 'prettier/vim-prettier'
 
-"Brief help
-":PluginList       - lists configured plugins
-":PluginInstall    - installs plugins; append `!` to update or just
-":PluginUpdate
-":PluginSearch foo - searches for foo; append `!` to refresh local cache
-":PluginClean      - confirms removal of unused plugins; append `!` to
-"auto-approve removal
+call plug#end()            " required
 
-"see :h vundle for more details or wiki for FAQ
-"Put your non-Plugin stuff after this line
+"Open nerd tree when starting vim.
+"autocmd vimenter * NERDTree
 
 set number
 syntax enable
 
 "tab-completion 
 set path+=**
+"see :h vundle for more details or wiki for FAQ
 set wildmenu
 
 "tab length 
@@ -53,14 +46,12 @@ hi SpellBad cterm=underline
 highlight ExtraWhitespace ctermbg=darkgreen guibg=darkgreen
 :autocmd Syntax * syn match ExtraWhitespace /\s\+$\| \+\ze\t/
 
-"absolute width of netrw window
-let g:netrw_winsize = -28
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
 
-"tree-view
-let g:netrw_liststyle = 3
-
-"sort is affecting only: directories on the top, files below
-let g:netrw_sort_sequence = '[\/]$,*'
-
-"open file in a new tab
-let g:netrw_browse_split = 3
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_javascript_checkers = ["standard"]

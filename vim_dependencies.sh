@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 # Requires Vim to be installed first.
-echo "Installing Vundle."
-if [ hash git &> /dev/null -a hash curl &>/dev/null ]
+echo "Installing vim-plug"
+if [ hash curl &>/dev/null ]
   then
-    git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-    vim +PluginInstall +qall
+    curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+          https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
   else
-    echo "Git and curl needed to install Vundle."
+    echo "curl needed to install vim-plug."
 fi

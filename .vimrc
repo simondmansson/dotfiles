@@ -26,25 +26,27 @@ call plug#end()            " required
 set number
 syntax enable
 
-"tab-completion 
+"tab-completion
 set path+=**
 "see :h vundle for more details or wiki for FAQ
 set wildmenu
 
-"tab length 
-set tabstop=2    
+"tab length
+set tabstop=2
 set shiftwidth=2
 set softtabstop=2
-set expandtab  
+set expandtab
 
 "spelling
-:set spell spelllang=en_us 
+:set spell spelllang=en_us
 hi clear SpellBad
 hi SpellBad cterm=underline
 
 "white space highlighting with colors for dark backgrounds
-highlight ExtraWhitespace ctermbg=darkgreen guibg=darkgreen
-:autocmd Syntax * syn match ExtraWhitespace /\s\+$\| \+\ze\t/
+"highlight ExtraWhitespace cterm=underline
+":autocmd Syntax * syn match ExtraWhitespace /\s\+$\| \+\ze\t/
+" Ws removal on save
+:autocmd BufWritePre * %s/\s\+$//e
 
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
@@ -55,3 +57,4 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_javascript_checkers = ["standard"]
+

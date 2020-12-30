@@ -208,7 +208,8 @@ bar {
                 separator #195465
                 statusline #D3EBE9
         }
-        status_command i3status
+        
+        status_command i3status -c ~/.config/i3/i3status.conf
 }
 
 #######################################################################

@@ -13,7 +13,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " File Explorer
     Plug 'scrooloose/NERDTree'
     " FZF
-    Plug 'vijaymarupudi/nvim-fzf'
+    Plug "~./fzf"
     " Spellchecking
     Plug 'nvim-treesitter/nvim-treesitter'
     Plug 'lewis6991/spellsitter.nvim'

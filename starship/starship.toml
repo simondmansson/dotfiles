@@ -48,8 +48,9 @@ time_format = "%R" # Hour:Minute Format
 format = '[[   $time ](fg:white)]($style)'
 
 
-[character] 
-success_symbol = '[λ](bold green)' 
+[character]
+success_symbol = '[λ](bold green)'
+error_symbol = '[λ](bold red)'
 
 [package]
 disabled = true

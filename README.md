@@ -8,3 +8,4 @@ My favourite combination of copy-pasta form various parts of the internet.
 - [lsd](https://github.com/lsd-rs/lsd)
 - [fd](https://github.com/sharkdp/fd)
 - [fzf](https://github.com/junegunn/fzf)
+- [ripgrep](https://github.com/BurntSushi/ripgrep)
